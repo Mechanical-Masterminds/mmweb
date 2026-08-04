@@ -24,17 +24,14 @@ h1 {
 
 .base-text {
     color:#333;
-    text-align: center;
 }
 
 #typewriter-text {
     color:#007acc;
-    text-align: center;
 }
 
 .cursor {
     color:#007acc;
-    text-align: ce;
     animation: blink 0.7s infinite;
 }
 
