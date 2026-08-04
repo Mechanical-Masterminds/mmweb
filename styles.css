@@ -1,0 +1,37 @@
+/* HEADER */
+
+
+
+
+
+/* BASE STYLES */
+html {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* TYPEWRITER EFFECT INDEX */
+.typewriter-container {
+    font-size:24px;
+    font-weight:bold;
+}
+
+.base-text {
+    color:#333;
+}
+
+#typewriter-text {
+    color:#007acc;
+}
+
+.cursor {
+    color:#007acc;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
