@@ -1,37 +1,49 @@
 /* HEADER & NAVBAR */
 header {
     width:100%;
-    background-color:#7facdc;
-    padding:20px 40px;
+    background-color:transparent;
+    padding:0px;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow: none;
     z-index:1000;
 }
 
 .nav-container {
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: 1fr auto;
     align-items:center;
     max-width:1200px;
     margin: 0 auto;
+    padding:20px 40px;
+    box-sizing:border-box;
+    transition: padding 0.4s ease-in-out;
 }
 
 .logo {
     text-decoration:none;
     color:inherit;
+    grid-column: 1 / -1;
+    justify-self:center;
+    transition:all 0.4s ease-in-out;
 }
 
 header h1 {
     margin:0;
-    font-size:2rem;
-    transition: all 0.3s ease-in-out;
+    font-size:2.5rem;
+    text-align:center;
+    transition: all 0.4s ease-in-out;
 }
 
 .nav-links {
+    grid-column: 2;
+    grid-row:1;
     display:flex;
     align-items:center;
     gap:25px;
+    opacity:0;
+    pointer-events:none;
+    transition:all 0.4s ease-in-out;
 }
 
 .nav-item {
@@ -87,12 +99,40 @@ header.sticky {
     position:fixed;
     top:0;
     left:0;
-    padding:10px 40px;
+    padding:0;
+    background-color:#7facdc;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 header.sticky h1 {
-    font-size:1.4rem;
+    margin:0;
+}
+
+header.sticky .nav-links {
+    opacity:1;
+    pointer-events:auto;
+    grid-column:2;
+    grid-row:1;
+    justify-self:end;
+}
+
+header.sticky .logo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self:start;
+    margin-left: -15px;
+}
+
+header.sticky .logo h1 {
+    color: #f9fbfc;
+}
+
+header.sticky .nav-container {
+    padding:20px 50px;
+}
+
+header.sticky .nav-item {
+    color: #f9fbfc
 }
 
 /* BASE STYLES */
@@ -101,19 +141,20 @@ html {
     margin:0;
     padding:0;
 }
-
+/*This helps with centering text i think idk*/
 body {
     margin:0;
     padding:0;
+    width:100%;                
+    background-color:#ffffff;
 }
-/*This helps with centering text i think idk*/
-body {
-    margin: 0;                 
-    min-height: 100vh; /*This moves it down*/
-    display: flex;  
-    flex-direction: column; /*Keeps the h1 and span thingy not in one line but stacked on each other*/      
-    justify-content: center;  
-    align-items: center;
+
+.hero-section {
+    min-height:70vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
 /* TYPEWRITER EFFECT INDEX */
@@ -143,4 +184,10 @@ h1 {
 @keyframes blink {
     0%, 100% {opacity: 1;}
     50% {opacity: 0;}
+}
+
+.scroll-spacer {
+    height:150vh; /* Extra tall for scroll testing */
+    background-color:#f4f4f4;
+
 }
