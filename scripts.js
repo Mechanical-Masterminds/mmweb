@@ -41,5 +41,26 @@ function typeEffect() {
     setTimeout(typeEffect, typeSpeed);
 }
 
+//sticky header scroll logic (index page only)
+function handleStickyHeader() {
+    const header = document.getElementById("main-header");
+    const typewriterContainer = document.querySelector(".typewriter-container");
+
+    //strictly exit if not on index
+
+    if (!typewriterContainer || !header) return;
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 60) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    });
+}
+
 //start effect on page load
-document.addEventListener("DOMContentLoaded", typeEffect);
+document.addEventListener("DOMContentLoaded", () => {
+    typeEffect();
+    handleStickyHeader();
+});

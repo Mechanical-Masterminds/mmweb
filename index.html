@@ -9,8 +9,27 @@
     </head>
     <body>
         <header>
-            <h1>Mechanical Masterminds</h1>
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <h1>Mechanical Masterminds</h1>
+                </a>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-item">Home</a>
+                    <a href="#" class="nav-item">About</a>
+                    <!--Dropdown example-->
+                    <div class="dropdown">
+                        <a href="#" class="nav-item dropbtn">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="#">Robots</a>
+                            <a href="#">Software</a>
+                            <a href="#">Outreach</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-item">Contact</a>
+                </nav>
+            </div>
         </header>
+        
         <div class="typewriter-container">
             <span class="base-text">We are </span>
             <span id="typewriter-text"></span>
