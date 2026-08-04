@@ -18,6 +18,14 @@ html {
     font-weight:bold;
 }
 
+span {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
 .base-text {
     color:#333;
 }
