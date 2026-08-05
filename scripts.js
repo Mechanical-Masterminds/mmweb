@@ -91,6 +91,12 @@ function currentSlide(n) {
 
 //start effect on page load
 document.addEventListener("DOMContentLoaded", () => {
+    const ticker = document.querySelector(".ticker-track");
+
+    if (ticker) {
+        ticker.innerHTML += ticker.innerHTML;
+    }
+
     typeEffect();
     handleStickyHeader();
     showSlides(slideIndex);
