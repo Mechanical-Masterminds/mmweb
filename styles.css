@@ -247,7 +247,7 @@ header.sticky .ticker {
     }
 }
 
-/* SCROLL TESTING */
+/* SCROLL TESTING and Box/row system*/
 
 .scroll-spacer {
     height: 150vh; /* Extra tall for scroll testing */
@@ -257,13 +257,61 @@ header.sticky .ticker {
 .row {
     width: 100%;
     display:flex;
+    align-items:stretch;
+    box-sizing:border-box;
 }
 
 .box {
     flex: 1;
+    max-width:50%;
+    box-sizing:border-box;
     border-right: 4px solid #f4f4f4;
     border-left: 4px solid #f4f4f4;
     padding: 20px;
+}
+
+.xl {
+    font-size: 100px;
+    text-align: left;
+}
+
+/* Image Carousel */
+
+.carousel-container {
+    position:relative;
+    width: 100%;
+    margin:auto;
+}
+
+.slide {
+    display:none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display:block;
+}
+.prev, .next {
+    cursor:pointer;
+    position:absolute;
+    top:50%;
+    padding:16px;
+    color:white;
+    font-size:18px;
+}
+
+.caption {
+    position:absolute;
+    bottom: 8px;
+    text-align:center;
+}
+
+.dot {
+    height:15px;
+    width:15px;
+    margin: 0 2px;
+    background-color: #bbb;
 }
 
 @media (max-width: 700px) {
