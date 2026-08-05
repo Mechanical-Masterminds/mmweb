@@ -4,7 +4,6 @@ let wordIndex=0;
 let charIndex=0;
 let isDeleting=false;
 
-
 function typeEffect() {
 
     const targetElement = document.getElementById("typewriter-text");
@@ -61,6 +60,12 @@ function handleStickyHeader() {
 
 //start effect on page load
 document.addEventListener("DOMContentLoaded", () => {
+    const ticker = document.querySelector(".ticker-track");
+
+    if (ticker) {
+        ticker.innerHTML += ticker.innerHTML;
+    }
+
     typeEffect();
     handleStickyHeader();
 });

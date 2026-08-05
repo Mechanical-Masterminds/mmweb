@@ -186,20 +186,22 @@ header.sticky .ticker {
 }
 
 .ticker-track {
-    display: inline-block;
-    animation: tickerMove 30s linear infinite;
+    width: max-content;
+    display: flex;
+    gap:200px;
+    animation: tickerMove 15s linear infinite;
 }
 
 .ticker-track span {
-    padding-right: 200px;
+    flex-shrink: 0;
 }
 
 @keyframes tickerMove {
     from {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
