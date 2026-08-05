@@ -1,169 +1,17 @@
-/* HEADER & NAVBAR a */
-header {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background-color:transparent;
-    padding:0px;
-    box-sizing: border-box;
-    transition: all 0.4s ease-in-out;
-    box-shadow: none;
-    z-index:1000;
-}
-
-.nav-container {
-    display:grid;
-    grid-template-columns: 1fr auto;
-    align-items:center;
-    max-width:1200px;
-    margin: 0 auto;
-    padding:20px 40px;
-    box-sizing:border-box;
-    transition: padding 0.4s ease-in-out;
-}
-
-.logo {
-    text-decoration:none;
-    color:inherit;
-    grid-column: 1 / -1;
-    justify-self:center;
-    transition:all 0.4s ease-in-out;
-}
-
-header h1 {
-    margin:0;
-    font-size:2.5rem;
-    text-align:center;
-    transition: all 0.4s ease-in-out;
-}
-
-.nav-links {
-    grid-column: 2;
-    grid-row:1;
-    display:flex;
-    align-items:center;
-    gap:25px;
-    opacity:0;
-    pointer-events:none;
-    transition:all 0.4s ease-in-out;
-}
-
-.nav-item {
-    text-decoration:none;
-    color:#e92f2f;
-    font-weight:600;
-    font-size:1rem;
-    transition:color 0.2 ease;
-}
-
-.nav-item:hover {
-    color:#ffffff;
-}
-
-/* DROPDOWN LOGIC */
-.dropdown {
-    position:relative;
-    display:inline-block;
-}
-
-.dropdown-content {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background-color:#7facdc;
-    min-width:160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-    border-radius:4px;
-    z-index:1001;
-    overflow:hidden;
-}
-
-.dropdown-content a {
-    color: #cdcdcd;
-    padding:12px 16px;
-    text-decoration:none;
-    display:block;
-    font-size:0.95rem;
-    transition:background-color 0.2s ease, color 0.2s ease;
-}
-
-.dropdown-content a:hover {
-    background-color:#7facdc;
-    color:#ffffff;
-}
-
-.dropdown:hover .dropdown-content {
-    display:block;
-}
-
-header.sticky {
-    position:fixed;
-    top:0;
-    left:0;
-    padding:0;
-    background-color:#7facdc;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-header.sticky h1 {
-    margin:0;
-}
-
-header.sticky .nav-links {
-    opacity:1;
-    pointer-events:auto;
-    grid-column:2;
-    grid-row:1;
-    justify-self:end;
-}
-
-header.sticky .logo {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self:start;
-    margin-left: -15px;
-}
-
-header.sticky .logo h1 {
-    color: #f9fbfc;
-}
-
-header.sticky .nav-container {
-    padding:20px 50px;
-}
-
-header.sticky .nav-item {
-    color: #f9fbfc
-}
-
 /* BASE STYLES */
+
 html {
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 /*This helps with centering text i think idk*/
 body {
-    margin:0;
-    padding:0;
-    width:100%;                
-    background-color:#ffffff;
-}
-
-.hero-section {
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-/* TYPEWRITER EFFECT INDEX */
-.typewriter-container {
-    font-size:30px;
-    font-weight:bold;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #f4f4f4;
 }
 
 h1 {
@@ -171,26 +19,300 @@ h1 {
     font-weight: 50px;
 }
 
+/* HEADER & NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    box-shadow: none;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    transition: padding 0.4s ease-in-out;
+}
+
+.logo {
+    text-decoration: none;
+    color: inherit;
+    grid-column: 1 / -1;
+    justify-self: center;
+    transition: all 0.4s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-links {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 17px;
+    transition: color 0.2 ease;
+}
+
+.nav-item:hover {
+    color: #ffffff;
+}
+
+/* DROPDOWN LOGIC */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7facdc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #cdcdcd;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #7facdc;
+    color: #ffffff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* STICKY HEADER */
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    background-color: #7facdc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header.sticky h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header.sticky .nav-container {
+    padding: 15px 50px;
+}
+
+header.sticky .logo {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    margin-left: -15px;
+}
+
+header.sticky .logo h1 {
+    color: #f9fbfc;
+}
+
+header.sticky .nav-links {
+    opacity: 1;
+    pointer-events: auto;
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+}
+
+header.sticky .nav-item {
+    color: #f9fbfc;
+}
+
+header.sticky ~ .hero-section .typewriter-container {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* CSS Ticker */
+
+.ticker {
+    display: none;
+    width: 100%;
+    background-color: #7facdc;
+    color: #f4f4f4;
+    white-space: nowrap;
+    overflow:hidden;
+    padding: 8px 0;
+    font-size: 19px;
+}
+
+header.sticky .ticker {
+    display:block;
+}
+
+.ticker-track {
+    display: inline-block;
+    animation: tickerMove 30s linear infinite;
+}
+
+.ticker-track span {
+    padding-right: 200px;
+}
+
+@keyframes tickerMove {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction:column;
+}
+
+/* TYPEWRITER EFFECT INDEX */
+
+.typewriter-container {
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    text-align:center;
+    transition: all 0.4s ease-in-out;
+}
+
 .base-text {
-    color:#333;
+    color: #333;
 }
 
 #typewriter-text {
-    color:#007acc;
+    color: #007acc;
 }
 
 .cursor {
-    color:#007acc;
+    color: #007acc;
     animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
-    0%, 100% {opacity: 1;}
-    50% {opacity: 0;}
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
+
+/* SCROLL TESTING */
 
 .scroll-spacer {
-    height:150vh; /* Extra tall for scroll testing */
-    background-color:#f4f4f4;
-
+    height: 150vh; /* Extra tall for scroll testing */
+    background-color: #f4f4f4;
 }
+
+.row {
+    width: 100%;
+    display:flex;
+}
+
+.box {
+    flex: 1;
+    border-right: 4px solid #f4f4f4;
+    border-left: 4px solid #f4f4f4;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction:column;
+    }
+    .box {
+        border-right: none;
+        border-left: none;
+        border-bottom: 4px solid #f4f4f4;
+    }
+
+    /* Mobile header */
+
+    .nav-container {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        grid-column: auto;
+        justify-self: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    header.sticky .nav-container {
+        padding: 15px 20px;
+    }
+
+    header.sticky .logo {
+        margin-left: 0;
+        justify-self: center;
+    }
+
+    .ticker {
+        display: none !important;
+    }
+
+    
+
+    
+}
+
+
