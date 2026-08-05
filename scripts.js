@@ -1,5 +1,5 @@
 // Typewriter effect
-const words = ["Team 30329.", "coders.", "engineers.", "designers.", "helpers.", "BACK!"];
+const words = ["Team 30329.", "programmers.", "engineers.", "designers.", "helpers.", "BACK!"];
 let wordIndex=0;
 let charIndex=0;
 let isDeleting=false;
