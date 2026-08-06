@@ -303,6 +303,14 @@ header.sticky .ticker {
     font-size:18px;
 }
 
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
 .caption {
     position:absolute;
     bottom: 8px;
@@ -314,6 +322,10 @@ header.sticky .ticker {
     width:15px;
     margin: 0 2px;
     background-color: #bbb;
+}
+
+.active {
+    background-color: #717171;
 }
 
 @media (max-width: 700px) {
