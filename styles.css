@@ -163,6 +163,10 @@ header.sticky .nav-item {
     color: #f9fbfc;
 }
 
+header.sticky .nav-item:hover {
+    color: #606060;
+}
+
 header.sticky ~ .hero-section .typewriter-container {
     width: fit-content;
     margin: 0 auto;
@@ -291,7 +295,7 @@ header.sticky .ticker {
 
 .slide img {
     width: 100%;
-    height: auto;
+    height: 500px;
     display:block;
 }
 .prev, .next {
@@ -327,6 +331,8 @@ header.sticky .ticker {
 .active {
     background-color: #717171;
 }
+
+
 
 @media (max-width: 700px) {
     .row {
