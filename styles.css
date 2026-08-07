@@ -310,8 +310,8 @@ header.sticky .ticker {
     flex: 1;
     max-width:50%;
     box-sizing:border-box;
-    border-right: 4px solid #f4f4f4;
-    border-left: 4px solid #f4f4f4;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
     padding: 20px;
 }
 
@@ -424,8 +424,23 @@ header.sticky .ticker {
 
 .bluebg {
     background-color: #1c3b5e !important;
+    color:#f4f4f4;
 }
 
 .graybg {
     background-color: #1e293b !important;
+    color:#f4f4f4;
 }
+
+.centerclass {
+    text-align:center !important;
+    font-size:75px;
+    
+}
+
+.fixpls {
+    position:absolute;
+    left:0;
+    width:100%;
+}
+
