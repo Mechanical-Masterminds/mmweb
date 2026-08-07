@@ -422,4 +422,10 @@ header.sticky .ticker {
     
 }
 
+.bluebg {
+    background-color: #1c3b5e !important;
+}
 
+.graybg {
+    background-color: #1e293b !important;
+}
