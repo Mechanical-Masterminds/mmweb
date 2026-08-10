@@ -58,6 +58,8 @@ header h1 {
     font-size: 2.5rem;
     text-align: center;
     transition: all 0.4s ease-in-out;
+    color:#f4f4f4;
+
 }
 
 .nav-links {
@@ -257,6 +259,17 @@ header.sticky .ticker {
     align-items: center;
     text-align: center;
     flex-direction:column;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+}
+
+.hero-section::before {
+    content: "";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.3);
 }
 
 /* TYPEWRITER EFFECT INDEX */
@@ -267,18 +280,23 @@ header.sticky .ticker {
     width: 100%;
     text-align:center;
     transition: all 0.4s ease-in-out;
+    position:relative;
+    z-index:1;
 }
 
 .base-text {
-    color: #333;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 6px black;
 }
 
 #typewriter-text {
     color: #007acc;
+    text-shadow: 2px 2px 6px black;
 }
 
 .cursor {
-    color: #007acc;
+    color: #f4f4f4;
+    text-shadow: 2px 2px 6px black;
     animation: blink 0.7s infinite;
 }
 

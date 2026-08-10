@@ -5,6 +5,12 @@ let charIndex=0;
 let isDeleting=false;
 let slideIndex =1;
 
+const heroImages = [
+    "media/image1.webp",
+    "media/image2.webp",
+    "media/honda-s2000-sun.jpeg"
+];
+
 function typeEffect() {
 
     const targetElement = document.getElementById("typewriter-text");
@@ -61,23 +67,16 @@ function handleStickyHeader() {
 
 //Carousel logic
 function showSlides (n) {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) {slideIndex=1;}
-    if (n < 1) { slideIndex = slides.length}
-
-    for (let i=0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    if (n > heroImages.length) {
+        slideIndex=1;
     }
 
-    for (let i=0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    if (n < 1) {
+        slideIndex=heroImages.length;
     }
 
-    slides[slideIndex-1].style.display="block";
-    dots[slideIndex-1].className += " active";
-
+    document.querySelector(".hero-section").style.backgroundImage =
+        `url("${heroImages[slideIndex - 1]}")`;
 }
 
 function changeSlide(n) {
@@ -107,13 +106,16 @@ document.addEventListener("DOMContentLoaded", () => {
         logoLink.addEventListener("click",function(event) {
             event.preventDefault();
             const loadValue=generateLoadNumber();
-            window.location.href='index.html?unnecessarythingattheendofthelink='+loadValue;
+            window.location.href='index.html?loadpageoneventclickindexpagevalue='+loadValue;
         });
 }
 
     typeEffect();
     handleStickyHeader();
     showSlides(slideIndex);
+    setInterval(() => {
+        changeSlide(1);
+    },8000);
 });
 
 if (ticker) {
