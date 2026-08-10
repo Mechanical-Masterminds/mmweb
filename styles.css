@@ -444,6 +444,10 @@ header.sticky .ticker {
     color:#7facdc;
 }
 
+li i {
+color:#7facdc;
+}
+
 .fixpls {
     position:absolute;
     left:0;
