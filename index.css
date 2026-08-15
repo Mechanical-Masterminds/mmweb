@@ -342,6 +342,7 @@ header.sticky .ticker {
     padding: 20px;
 }
 
+
 .xl {
     font-size: 100px;
     text-align: left;
@@ -523,4 +524,30 @@ button {
 
 button:hover {
     text-decoration:underline;
+}
+
+.midcenter {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.bgnice {
+    margin:50px;
+    background-color:#ffffff;
+    border-left-color:gray;
+}
+
+.box:not(.placeholder) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:not(.placeholder):hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(120,169,212,0.35);
+}
+
+footer p {
+    padding: 20px;
+    text-align:center;
 }
