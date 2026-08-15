@@ -404,11 +404,16 @@ header.sticky .ticker {
 @media (max-width: 700px) {
     .row {
         flex-direction:column;
+        align-items:center;
     }
     .box {
         border-right: none;
         border-left: none;
-        border-bottom: 4px solid #f4f4f4;
+        border-bottom: 4px solid transparent;
+        max-width: 100%;
+        width:100%;
+        margin:20px auto;
+        box-sizing: border-box;
     }
 
     /* Mobile header */
@@ -417,14 +422,24 @@ header.sticky .ticker {
         display:flex;
         flex-direction: column;
         align-items: center;
+        height:auto;
+        min-height:85px;
+        padding: 15px 20px;
     }
 
     .logo {
         grid-column: auto;
         justify-self: center;
+        position:static;
+        transform:none;
+        margin:0;
     }
 
     .nav-links {
+        position:static;
+        transform:none;
+        opacity:0;
+        pointer-events:auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -434,11 +449,18 @@ header.sticky .ticker {
 
     header.sticky .nav-container {
         padding: 15px 20px;
+        height:auto;
+        min-height:70px;
+        padding:10px 20px;
     }
 
     header.sticky .logo {
         margin-left: 0;
         justify-self: center;
+        position:static;
+        left:auto;
+        transform:none;
+        margin:0;
     }
 
     .ticker {
@@ -457,6 +479,26 @@ header.sticky .ticker {
     .Ifordark {
         font-size: 50px;
     }
+
+    header h1 {
+        font-size:24px;
+    }
+
+    header.sticky h1 {
+        font-size:21px;
+    }
+
+    header.sticky .nav-links {
+        position:static;
+        right:auto;
+        top:auto;
+        transform:none;
+        opacity:1;
+        pointer-events:auto;
+        margin-top:8px;
+    }
+
+    
 
     
 }
