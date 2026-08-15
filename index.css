@@ -478,6 +478,29 @@ header.sticky .ticker {
     
 }
 
+.centerclass::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #8bc4ee;
+    margin: 15px auto 0;
+    margin-bottom: 15px;
+    border-radius: 50px;
+    box-shadow: 0 0 12px rgba(139,196,238,0.5);
+}
+
+.Notforheader::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #8bc4ee;
+    margin: 15px auto 0;
+    border-radius: 50px;
+    box-shadow: 0 0 12px rgba(139,196,238,0.5);
+}
+
 .Ifordark {
     text-align:center !important;
     font-size:75px;
