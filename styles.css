@@ -568,3 +568,20 @@ footer p {
     }
 
 }
+
+/* ABOUT PAGE CSS */
+.pic {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.pic h3 {
+    margin-top:10px;
+    margin-bottom:5px;
+}
+.personpic {
+    width: 200px;
+    height: 250px;
+}
