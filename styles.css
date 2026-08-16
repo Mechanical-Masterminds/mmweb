@@ -585,3 +585,7 @@ footer p {
     width: 200px;
     height: 250px;
 }
+
+.w {
+    color: black !important;
+}
